@@ -1,0 +1,74 @@
+So basically this seems like a long binary
+
+First it goes to the "entry" function where it runs and infinite loop and calls FUN***397. That doesn't do anything except call the FUN***201
+
+397:
+uses fgets
+Probably not useful, can't overflow anything there
+
+Let's move forward
+201
+
+void FUN_00401201(char *param_1)
+
+{
+  int iVar1;
+  char local_18 [16];
+  
+  iVar1 = strcmp(param_1,"id\n");   // ITS LOOKING FOR ID. IF ID IS ENTERED, IT PRINTS STRING A
+  if (iVar1 == 0) {
+    puts("guest(1337) guest(1337) HTB(31337)"); // STRING A
+  }
+  else {
+    iVar1 = strcmp(param_1,"dir\n"); // ITS LOOKING FOR DIR. IF IT IS DIR, THEN PRINTS STRING B
+    if (iVar1 == 0) {
+      puts("/home/HTB");    // STRING B
+    }
+    else {
+      iVar1 = strcmp(param_1,"flag\n");
+      if (iVar1 == 0) {
+        printf("Enter flag: "); 
+        fgets(local_18,0x30,stdin); // BUFFER SIZE 16, BUT ALLOWING 48 BYTES? TF? OVERWRITE OTHER VARIABLES?
+        puts("Whoops, wrong flag!");
+      }
+      else {
+        iVar1 = strcmp(param_1,"hof\n");
+        if (iVar1 == 0) {
+          puts("Register yourself for HTB Hall of Fame!");
+          printf("Enter your name: ");
+          fgets(&DAT_004040b0,10,stdin);
+          puts("See you on HoF soon! :)");
+        }
+        else {
+          iVar1 = strcmp(param_1,"ls\n");
+          if (iVar1 == 0) {
+            puts("- Boxes");
+            puts("- Challenges");
+            puts("- Endgames");
+            puts("- Fortress");
+            puts("- Battlegrounds");
+          }
+          else {
+            iVar1 = strcmp(param_1,"date\n");  //DATE
+            if (iVar1 == 0) {
+              system("date"); // THERE IS A SYSTEM CALL, MAYBE WE CAN USE THAT?????
+            }
+            else {
+              puts("Unrecognized command.");
+            }
+          }
+        }
+      }
+    }
+  }
+  return;
+}
+
+
+So from analyzing the functions, it seems we have a ROP challenge. A lot of the functions just have the ret instruction
+
+Oh yeah, I also found the buffer size is 24, you overwrite the return address I think
+
+
+
+
