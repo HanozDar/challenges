@@ -36,7 +36,7 @@ void FUN_00401201(char *param_1)
         if (iVar1 == 0) {
           puts("Register yourself for HTB Hall of Fame!");
           printf("Enter your name: ");
-          fgets(&DAT_004040b0,10,stdin);
+          fgets(&DAT_004040b0,10,stdin); // WE CAN SEE IN GHIDRA THAT IT IS WRITING DIRECTLY TO BSS. COOL MAYBE WE CAN WRITE LESS THAN 10 BYTES OF SHELLCODE THERE AND POINT?
           puts("See you on HoF soon! :)");
         }
         else {
@@ -68,6 +68,25 @@ void FUN_00401201(char *param_1)
 So from analyzing the functions, it seems we have a ROP challenge. A lot of the functions just have the ret instruction
 
 Oh yeah, I also found the buffer size is 24, you overwrite the return address I think
+
+The logic is, for a ROP, if you can set the instruction pointer to execute a POP RDI, or some ROP Gadget,
+The RDI register will get set to what we tell it to in the next stack address
+If we set the next stack address to BSS, and then do a CALL SYSTEM, then we will get the equivalent of system(bss_string)
+So the chain here will be
+POP RDI -> (ADDRESS OF BSS where we store a command) -> SYSTEM
+
+So you need a POP RDI
+Find it using 
+┌──(hanoz㉿kali)-[~/Desktop/htb/challenges/HTBConsole]
+└─$ ropper -f htb-console --search "pop rdi"                                                                                                                                                                                             1 ⚙
+[INFO] Load gadgets from cache
+[LOAD] loading... 100%
+[LOAD] removing double gadgets... 100%
+[INFO] Searching for gadgets: pop rdi
+
+[INFO] File: htb-console
+0x0000000000401473: pop rdi; ret; 
+
 
 
 
