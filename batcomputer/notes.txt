@@ -1,0 +1,49 @@
+┌──(hanoz㉿kali)-[~/Desktop/htb/challenges/batcomputer]
+└─$ file batcomputer
+batcomputer: ELF 64-bit LSB pie executable, x86-64, version 1 (SYSV), dynamically linked, interpreter /lib64/ld-linux-x86-64.so.2, BuildID[sha1]=497abb33ba7b0370d501f173facc947759aa4e22, for GNU/Linux 3.2.0, stripped
+
+gdb-peda$ checksec
+CANARY    : disabled
+FORTIFY   : disabled
+NX        : disabled
+PIE       : ENABLED
+RELRO     : Partial
+
+So no canary and no NX. We can put shellcode in stack and this is probably a b-ovflo
+Cool
+
+Okay so its giving out some address for Joker. Address is changing. Let me try again with disabling ASLR and then running, but anyway
+
+It's also asking for a password so I'll check for a strcmp in ghidra
+
+First, if ASLR is randomizing the address. Yes it is! I disabled it and now I have a conisistent address to where Joker is 
+
+ggwp bpw
+
+0x7fffffffdf24 -> location of Joker ALSO THE ADDRESS OF THE STACK. WE HAVE THE RETURN POINTER
+
+Now password of batmobile
+
+b4tp@$$w0rd! -> got it from ghidra
+
+
+
+read(0,auStack84,0x89); It is reading 137 bytes
+
+And the buffer size is only 76
+GGWP Bois we have a buffer overflow
+
+
+
+We can use a /bin/sh script and try and get it?
+
+Pattern offset is 84 
+Time to start writing the code for the exploit, we have everything we need
+
+
+Okay the server has ASLR enabled so first we have to track the joker lol
+
+
+
+
+
