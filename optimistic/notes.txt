@@ -1,0 +1,26 @@
+optimistic: ELF 64-bit LSB pie executable, x86-64, version 1 (SYSV), dynamically linked, interpreter /lib64/ld-linux-x86-64.so.2, BuildID[sha1]=24f4b065a2eab20657772e85de2af83b2f6fe8b1, for GNU/Linux 3.2.0, not stripped
+
+gdb-peda$ checksec
+CANARY    : disabled
+FORTIFY   : disabled
+NX        : disabled
+PIE       : ENABLED
+RELRO     : Partial
+
+Probably means that we have to write shellcode in the buffer
+
+2 functions are there
+
+0x00000000000011b9  initialize
+0x0000000000001229  main
+
+Let's open in ghidra
+
+I think I found the buffer overflow. Let's start writing the script
+
+We found offset to be 104 gg ez
+
+So we have to use shellcode that is between 0x1 to 0x30 wtf
+What do I even do 
+Oh lol I found alphanumeric shellcode
+ 
