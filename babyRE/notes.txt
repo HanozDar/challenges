@@ -1,0 +1,6 @@
+This was a super easy challenge, because I did it in ghidra, I just checked what strcmp was comparing with and I got the password
+
+abcde122313
+
+enter that as the key and you have the flag
+
