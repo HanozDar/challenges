@@ -14,4 +14,4 @@ jim@juice-sh.op
 # 01 Finding the score board
 To find the score board, we can inspect the links of the page and we see that /score-board isn't linked yet. With this, when we visit 
 http://IP_ADDRESS/score-board, we can solve the challenge
-![[../images/score-board.png]]
+![Score Board](https://github.com/HanozDar/challenges/blob/master/owasp-js/images/score-board.png)
