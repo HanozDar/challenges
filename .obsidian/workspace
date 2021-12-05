@@ -1,0 +1,93 @@
+{
+  "main": {
+    "id": "deb47e332a9cd5b5",
+    "type": "split",
+    "children": [
+      {
+        "id": "4e48d793f02dbd3a",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "owasp-js/Answers and how to get them.md",
+            "mode": "source"
+          }
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "314af44496a5f947",
+    "type": "split",
+    "children": [
+      {
+        "id": "02714ea5af35a05f",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "9b251665102abd43",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "2e13ace383979001",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "25f1a88852d9e315",
+    "type": "split",
+    "children": [
+      {
+        "id": "88cb731e93b54aed",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "41a8036eabd421b4",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "owasp-js/Answers and how to get them.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "active": "4e48d793f02dbd3a",
+  "lastOpenFiles": [
+    "owasp-js/Answers and how to get them.md"
+  ]
+}

@@ -1,0 +1,62 @@
+gdb-peda$ checksec
+CANARY    : ENABLED
+FORTIFY   : disabled
+NX        : disabled
+PIE       : ENABLED
+RELRO     : FULL
+
+There is a canary and there is no NX so it might be a buffer overflow with leaked canary thru fmt string
+
+These are the functions are their relative addresses, let's see it in ghidra
+
+0x0000000000000b4a  setup
+0x0000000000000bb4  sec
+0x0000000000000ca4  sword
+0x0000000000000cfd  bow
+0x0000000000000d56  shield
+0x0000000000000dfb  main
+
+So from ghidra we can see that buffer size is 72 but it is reading 3f bytes we can't get any buffer overflow
+
+We can see whatever we send as payload is being sent is being executed directly as code 
+We need to first download tools to send code like this and generate it 
+
+We can also see that there is a security function there called seccomp rules so we need a tool that can read what these rules are so we can write the payload
+Great! Let's go!
+
+┌──(hanoz㉿kali)-[~/Desktop/htb/htb_challenges_active_notsolved/blacksmith]
+└─$ sudo seccomp-tools dump -c './blacksmith'                                                                    1 ⨯
+Traveler, I need some materials to fuse in order to create something really powerful!
+Do you have the materials I need to craft the Ultimate Weapon?
+1. Yes, everything is here!
+2. No, I did not manage to bring them all!
+> 1
+What do you want me to craft?
+1. 🗡
+2. 🛡
+3. 🏹
+> 2
+ line  CODE  JT   JF      K
+=================================
+ 0000: 0x20 0x00 0x00 0x00000004  A = arch
+ 0001: 0x15 0x00 0x08 0xc000003e  if (A != ARCH_X86_64) goto 0010
+ 0002: 0x20 0x00 0x00 0x00000000  A = sys_number
+ 0003: 0x35 0x00 0x01 0x40000000  if (A < 0x40000000) goto 0005
+ 0004: 0x15 0x00 0x05 0xffffffff  if (A != 0xffffffff) goto 0010
+ 0005: 0x15 0x03 0x00 0x00000000  if (A == read) goto 0009
+ 0006: 0x15 0x02 0x00 0x00000001  if (A == write) goto 0009
+ 0007: 0x15 0x01 0x00 0x00000002  if (A == open) goto 0009
+ 0008: 0x15 0x00 0x01 0x0000003c  if (A != exit) goto 0010
+ 0009: 0x06 0x00 0x00 0x7fff0000  return ALLOW
+ 0010: 0x06 0x00 0x00 0x00000000  return KILL
+ 
+ 
+ This is from seccomp. So we can see we are allowed to open, read and write! Brilliant, so now we know what shellcode to send to our system 
+ First we open flag.txt, read 100 bytes and then write that to stdout.
+ 
+ Perfect
+ 
+ when we read the file, we need to read the file to rsp register or it doesn't work -> NEeed to learn why
+ Also to write the stdout, write the value to rax, also WHY
+ Credits to CryptoCat! I learnt a lot! Thank you!
+ 
