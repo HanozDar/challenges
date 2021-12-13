@@ -6,4 +6,6 @@ So, if it's an HTB Flag, just unzip it with "HTB{PuT_th3_fl4g_H3re}"
 
 
 I've also added some RingZer0 coding challenge writeups. I'd solved this a long time ago, but lost the code for it, thought it'd be fun to re-do them!
+
+Adding to that, in preperation of my finals, I'm doing the Narnia buffer overflow challenges, so I'll upload the writeups to that as well
 Thank you!

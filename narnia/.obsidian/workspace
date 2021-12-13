@@ -1,0 +1,95 @@
+{
+  "main": {
+    "id": "0848aee7f1c1ae48",
+    "type": "split",
+    "children": [
+      {
+        "id": "1279f54a29def781",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "Narnia2 Writeup.md",
+            "mode": "source"
+          }
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "b25ab58d703ba234",
+    "type": "split",
+    "children": [
+      {
+        "id": "a4dd36a95450506a",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "c898447c732bcb96",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "edf10a6e2c153280",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "6e1c9761ff536368",
+    "type": "split",
+    "children": [
+      {
+        "id": "c22dfd7f6444c5db",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "51ebadf5751fe6f3",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Narnia2 Writeup.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "active": "1279f54a29def781",
+  "lastOpenFiles": [
+    "Narnia2 Writeup.md",
+    "Narnia1 Writeup.md",
+    "Narnia0 Writeup.md"
+  ]
+}
