@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "narnia/Narnia3 Writeup.md",
+            "file": "narnia/Narnia4 Writeup.md",
             "mode": "source"
           }
         }
@@ -68,7 +68,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "narnia/Narnia3 Writeup.md",
+                "file": "narnia/Narnia4 Writeup.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -88,8 +88,10 @@
   },
   "active": "4e48d793f02dbd3a",
   "lastOpenFiles": [
-    "narnia/Narnia3 Writeup.md",
+    "narnia/Narnia4 Writeup.md",
+    "narnia/Narnia1 Writeup.md",
     "narnia/Narnia2 Writeup.md",
+    "narnia/Narnia3 Writeup.md",
     "Narnia3 Writeup.md",
     "Untitled.md",
     "owasp-js/Answers and how to get them.md",
