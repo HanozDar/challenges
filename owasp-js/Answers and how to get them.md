@@ -32,3 +32,11 @@ Here, we see an acquisitions.md file and when we open it, we see this line
 ```
 Thus, we have found it!
 
+# 03 Finding an Instance of Improper error handling
+
+When in /ftp, we see some other documents too, like gg files, bak files and yaml files. When we try to open these files, we see the following error. 
+![Improper Error Handling](https://github.com/HanozDar/challenges/blob/master/owasp-js/images/improper-error-handling.png)
+
+Here, it is just directly outputting the Node error, rather than sanitizing it, revealing some potentially dangerous information. 
+Thus, this challenge is completed. 
+
