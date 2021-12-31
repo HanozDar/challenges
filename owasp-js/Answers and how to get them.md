@@ -57,7 +57,7 @@ Hence, the challenge is marked solved
 
 # 06 Redirects Tier 1
 We need to find a link that is redirecting us to another website. After scouring the website, I found something interesting in main.js
-![Redirect crypto wallet](https://github.com/HanozDar/challenges/blob/master/owasp-js/images/redirect-crypto-wallet.png)
+![Redirect crypto wallet](https://github.com/HanozDar/challenges/blob/master/owasp-js/images/redirect-crypto-wallets.png)
 
 Now, lets go there
 And the challenge is marked as solved!
