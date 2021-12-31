@@ -48,3 +48,9 @@ So we find the Privacy Policy in there and when we click on it, the challenge wi
 http://192.168.24.143:3000/#/privacy-security/privacy-policy
 ```
 
+# 05 XSS Tier 1
+Here, we simply find forms where we can input data. We see there is a search bar at the top of the page, so we go there and we input the parameter needed to get reflected XSS
+
+![XSS Tier 1](https://github.com/HanozDar/challenges/blob/master/owasp-js/images/xss-tier-1.png)
+
+Hence, the challenge is marked solved
