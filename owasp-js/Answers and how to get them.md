@@ -63,4 +63,14 @@ Now, lets go there
 And the challenge is marked as solved!
 
 # 07 0-star Feedback
+This challenge is pretty straightforward, all you had to do is create a request and see how the form data was handled. There is a rating field in the post request, which we can directly set to zero in burp
+![zero star rating](https://github.com/HanozDar/challenges/blob/master/owasp-js/images/0-star-rating.png)
+
+# 08 Repitative Registration
+The challenge asks us to check for the DRY principle. First let's see what it is
+DRY - Don't repeat yourself in User Registration.
+Cool, the only repeated field is the password.
+To solve this, while typing in the original password, we repeat it for the confirm password. If the confirm password is the same as original password, it does not show the error of "passwords do not match". However, if we change the original password AFTER the confirm password "passwords do not match is removed", then there is no error. 
+So we first need to match the passwords, then change the password, and we see that there is no error, and we are able to create an account. 
+Hence, the challenge is marked solved. 
 
