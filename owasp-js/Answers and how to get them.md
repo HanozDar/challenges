@@ -40,3 +40,11 @@ When in /ftp, we see some other documents too, like gg files, bak files and yaml
 Here, it is just directly outputting the Node error, rather than sanitizing it, revealing some potentially dangerous information. 
 Thus, this challenge is completed. 
 
+# 04 Reading the Privacy Policy
+This was a challenge similar to finding the scoreboard, we find a link with 
+/privacy-security.
+So we find the Privacy Policy in there and when we click on it, the challenge will appear solved.
+```text
+http://192.168.24.143:3000/#/privacy-security/privacy-policy
+```
+
