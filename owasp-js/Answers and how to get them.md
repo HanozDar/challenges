@@ -54,3 +54,13 @@ Here, we simply find forms where we can input data. We see there is a search bar
 ![XSS Tier 1](https://github.com/HanozDar/challenges/blob/master/owasp-js/images/xss-tier-1.png)
 
 Hence, the challenge is marked solved
+
+# 06 Redirects Tier 1
+We need to find a link that is redirecting us to another website. After scouring the website, I found something interesting in main.js
+![Redirect crypto wallet](https://github.com/HanozDar/challenges/blob/master/owasp-js/images/redirect-crypto-wallet.png)
+
+Now, lets go there
+And the challenge is marked as solved!
+
+# 07 0-star Feedback
+
