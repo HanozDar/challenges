@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "owasp-js/Answers and how to get them.md",
+            "file": "bonechewer/Solution.md",
             "mode": "source"
           }
         }
@@ -68,7 +68,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "owasp-js/Answers and how to get them.md",
+                "file": "bonechewer/Solution.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -88,6 +88,7 @@
   },
   "active": "4e48d793f02dbd3a",
   "lastOpenFiles": [
+    "bonechewer/Solution.md",
     "owasp-js/Answers and how to get them.md",
     "ringzer0/pwn/Level1.md",
     "narnia/Narnia2 Writeup.md",
@@ -96,7 +97,6 @@
     "narnia/Narnia1 Writeup.md",
     "narnia/Narnia3 Writeup.md",
     "Narnia3 Writeup.md",
-    "Untitled.md",
-    "owasp-js/images/score-board.png"
+    "Untitled.md"
   ]
 }
