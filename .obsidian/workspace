@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "bonechewer/Solution.md",
+            "file": "fullstackconf/Solution.md",
             "mode": "source"
           }
         }
@@ -68,7 +68,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "bonechewer/Solution.md",
+                "file": "fullstackconf/Solution.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -88,6 +88,7 @@
   },
   "active": "4e48d793f02dbd3a",
   "lastOpenFiles": [
+    "fullstackconf/Solution.md",
     "bonechewer/Solution.md",
     "owasp-js/Answers and how to get them.md",
     "ringzer0/pwn/Level1.md",
@@ -96,7 +97,6 @@
     "narnia/Narnia4 Writeup.md",
     "narnia/Narnia1 Writeup.md",
     "narnia/Narnia3 Writeup.md",
-    "Narnia3 Writeup.md",
-    "Untitled.md"
+    "Narnia3 Writeup.md"
   ]
 }
