@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "looking_glass/Solution.md",
+            "file": "HTBoxes/nunchucks/Solution - User only for now.md",
             "mode": "source"
           }
         }
@@ -68,7 +68,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "looking_glass/Solution.md",
+                "file": "HTBoxes/nunchucks/Solution - User only for now.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -88,6 +88,7 @@
   },
   "active": "4e48d793f02dbd3a",
   "lastOpenFiles": [
+    "HTBoxes/nunchucks/Solution - User only for now.md",
     "looking_glass/Solution.md",
     "baby_interdimensional/Solution.md",
     "bonechewer/Solution.md",
@@ -96,7 +97,6 @@
     "ringzer0/pwn/Level1.md",
     "narnia/Narnia2 Writeup.md",
     "narnia/Narnia5 Writeup.md",
-    "narnia/Narnia4 Writeup.md",
-    "narnia/Narnia1 Writeup.md"
+    "narnia/Narnia4 Writeup.md"
   ]
 }
