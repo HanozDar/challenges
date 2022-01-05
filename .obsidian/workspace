@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "ringzer0/pwn/Level3.md",
+            "file": "sanitize/Solution.md",
             "mode": "source"
           }
         }
@@ -68,7 +68,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "ringzer0/pwn/Level3.md",
+                "file": "sanitize/Solution.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -88,6 +88,8 @@
   },
   "active": "4e48d793f02dbd3a",
   "lastOpenFiles": [
+    "sanitize/Solution.md",
+    "nunchucks/Solution - User only for now.md",
     "ringzer0/pwn/Level3.md",
     "ringzer0/pwn/Level1.md",
     "ringzer0/pwn/Level2.md",
@@ -95,8 +97,6 @@
     "looking_glass/Solution.md",
     "baby_interdimensional/Solution.md",
     "bonechewer/Solution.md",
-    "fullstackconf/Solution.md",
-    "owasp-js/Answers and how to get them.md",
-    "narnia/Narnia2 Writeup.md"
+    "fullstackconf/Solution.md"
   ]
 }
