@@ -110,3 +110,18 @@ Connection: close
 And we have success!
 ![Another Basket](https://github.com/HanozDar/challenges/blob/master/owasp-js/images/another-basket.png)
 
+## 02 Login Admin
+It's pretty easy, when you learn that the login form is vulnerable to SQL injection
+If you put ' in the username and any random thing in password
+you get this at the top of the page
+```text
+[object Object]
+```
+
+Error not gracefully handled, so let's construct a payload for logging into admin
+```text
+admin@juice-sh.op';--
+```
+
+Cool! We have logged in!
+
