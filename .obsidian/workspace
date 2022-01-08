@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "sanitize/Solution.md",
+            "file": "owasp-js/Answers and how to get them.md",
             "mode": "source"
           }
         }
@@ -68,7 +68,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "sanitize/Solution.md",
+                "file": "owasp-js/Answers and how to get them.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -88,6 +88,7 @@
   },
   "active": "4e48d793f02dbd3a",
   "lastOpenFiles": [
+    "owasp-js/Answers and how to get them.md",
     "sanitize/Solution.md",
     "nunchucks/Solution - User only for now.md",
     "ringzer0/pwn/Level3.md",
@@ -96,7 +97,6 @@
     "HTBoxes/nunchucks/Solution - User only for now.md",
     "looking_glass/Solution.md",
     "baby_interdimensional/Solution.md",
-    "bonechewer/Solution.md",
-    "fullstackconf/Solution.md"
+    "bonechewer/Solution.md"
   ]
 }
