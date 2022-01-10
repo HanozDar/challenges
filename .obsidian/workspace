@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "baby_auth/Solution.md",
+            "file": "picoctf/web-exploitation/get-ahead/Solution.md",
             "mode": "source"
           }
         }
@@ -68,7 +68,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "baby_auth/Solution.md",
+                "file": "picoctf/web-exploitation/get-ahead/Solution.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -88,6 +88,7 @@
   },
   "active": "4e48d793f02dbd3a",
   "lastOpenFiles": [
+    "picoctf/web-exploitation/get-ahead/Solution.md",
     "baby_auth/Solution.md",
     "owasp-js/Answers and how to get them.md",
     "sanitize/Solution.md",
@@ -96,7 +97,6 @@
     "ringzer0/pwn/Level1.md",
     "ringzer0/pwn/Level2.md",
     "HTBoxes/nunchucks/Solution - User only for now.md",
-    "looking_glass/Solution.md",
-    "baby_interdimensional/Solution.md"
+    "looking_glass/Solution.md"
   ]
 }
