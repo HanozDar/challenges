@@ -13,7 +13,7 @@ We get a meme
 
 We also see thq query echoed at the bottom
 
-![Query echo](https://github.com/HanozDar/challenges/blob/master/sanitize/images/query_at_bottom.png)
+![Query echo](https://github.com/HanozDar/challenges/blob/master/htb-challenges/sanitize/images/query_at_bottom.png)
 
 
 Now if we send this payload

@@ -86,7 +86,7 @@ eval("__import__('os').popen('').read()")
 Now we can try doing ls,
 First, this is our POC for command execution is 
 
-![LS POC RCE](https://github.com/HanozDar/challenges/blob/master/baby_interdimensional/images/ls-command-rce.png)
+![LS POC RCE](https://github.com/HanozDar/challenges/blob/master/htb-challenges/baby_interdimensional/images/ls-command-rce.png)
 
 Now let's try to figure out how to cat flag
 
