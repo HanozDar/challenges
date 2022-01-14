@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "ringzer0/pwn/Vault Exploit.md",
+            "file": "ringzer0/pwn/Level3.md",
             "mode": "source"
           }
         }
@@ -68,7 +68,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "ringzer0/pwn/Vault Exploit.md",
+                "file": "ringzer0/pwn/Level3.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -88,15 +88,15 @@
   },
   "active": "4e48d793f02dbd3a",
   "lastOpenFiles": [
-    "ringzer0/pwn/Vault Exploit.md",
     "ringzer0/pwn/Level3.md",
+    "ringzer0/pwn/Level2_x86_64.md",
+    "ringzer0/pwn/Level2.md",
+    "ringzer0/pwn/Vault Exploit.md",
     "ringzer0/pwn/Level1_x86_64.md",
     "ringzer0/pwn/Level1.md",
     "README.md",
     "htb-challenges/sanitize/Solution.md",
     "htb-challenges/fullstackconf/Solution.md",
-    "htb-challenges/bonechewer/Solution.md",
-    "htb-challenges/baby_interdimensional/Solution.md",
-    "owasp-juice-shop/Answers and how to get them.md"
+    "htb-challenges/bonechewer/Solution.md"
   ]
 }
